@@ -20,7 +20,6 @@ public class PizzaService {
     }
 
     public List<PizzaDto> findAll() {
-        List<PizzaDto> pizzasDto = new ArrayList<>();
         List<PizzaEntity> pizzas = repository.findAll();
         return pizzas.stream()
                 .map(PizzaMapper::toModel)

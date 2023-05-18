@@ -17,7 +17,7 @@ public class MenuController {
         this.service = service;
     }
 
-    @GetMapping("menu")
+    @GetMapping("/menu")
     public String menuPage(Model model) {
         List<PizzaDto> pizzas = service.findAll();
         model.addAttribute("pizzas", pizzas);
